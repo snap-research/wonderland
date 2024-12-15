@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Wonderland: Navigating 3D Scenes from a Single Image</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta property="og:site_name" content="Wonderland" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="Wonderland: Navigating 3D Scenes from a Single Image" />
+    <meta property="og:description" content="Wonderland: Navigating 3D Scenes from a Single Image" />
+    <meta property="og:url" content="" />
+
+</head>
+
+<body>
+    <div class="highlight-clean" style="padding-bottom: 0px; padding-top: 20px;">
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px">
+            <h1 class="text-center" style="font-size:33px;"><b>Wonderland: Navigating 3D Scenes from a Single Image</b></h1>
+        </div>
+    
+        <div id="container">
+        <div class="buttons" style="margin-top: 8px; margin-bottom: 8px;">
+            <a class="btn btn-light" role="button" href="index.html">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+                </svg>
+                Main
+            </a>
+            <a class="btn btn-light" role="button" href="camera.html">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+                </svg>
+                More Camera-Guided Video Demos
+            </a>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="max-width: 1024px; margin-bottom: 10px">
+        <h2 class="text-center" style="font-size:28px; font-weight: bold;">3D Generations Gallery</h2>
+        <h2 class="text-center" style="font-size:18px;"><b>(Demos are rendered from 3DGS built by Wonderland. All the instances are unseen during model training.)</b></h2>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 1500px;">
+        
+        <div class="row captioned_videos">
+            <div class="container" style="max-width: 1500px; margin-top: 10px; margin-bottom: 5px;">  <!-- Adjusted margin-bottom to 10px -->
+                <h3 class="text-center" style="font-size: 24px; font-weight: bold;">3D Scenes Generation on In-the-wild datasets in One-shot</h3>  <!-- Made text bold -->
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2px; margin-left: 2%;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <h2 class="caption" style="font-size: 13px;">Input Image</h2>
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/90151045/0.png"  
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <h2 class="caption" style="font-size: 13px;">Renderings</h2>
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/90151045/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <h2 class="caption" style="font-size: 13px;">Input Image</h2>
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/fce8af7/0.png"
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <h2 class="caption" style="font-size: 13px;">Renderings</h2>
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/fce8af7/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2px; margin-left: 2%;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/fcf74e6/0.png"  
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/fcf74e6/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/SUPP_InWild/0a62a0173_wj/0.png"
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/SUPP_InWild/0a62a0173_wj/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2px; margin-left: 2%;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/28/0.png"  
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/28/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/fb1f477/0.png"
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/fb1f477/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2px; margin-left: 2%;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/SUPP_InWild/000c1dcb4_wj/0.png"  
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/SUPP_InWild/000c1dcb4_wj/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/93152099/0.png"
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/93152099/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2px; margin-left: 2%;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/fb223fa/0.png"  
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/fb223fa/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/fd416b7/0.png"
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/fd416b7/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2px; margin-left: 2%;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/SUPP_InWild/00c5bc997_wj/0.png"  
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/SUPP_InWild/00c5bc997_wj/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div class="compare-title" style="margin-bottom: 5px;">
+                        <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+                    </div>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="3d_spiral/fb3a12e/0.png"
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+                    <!-- Video 1 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+                        <div class="compare-title" style="margin-bottom: 5px;">
+                            <!-- <h2 class="caption" style="font-size: 13px;">Renderings</h2> -->
+                        </div>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                                src="3d_spiral/fb3a12e/ours_spi.mp4"
+                                style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    <div class="container" style="max-width: 1024px; margin-top: 30px; margin-bottom: 5px">
+        <h2 class="text-center" style="font-size:26px;font-weight: bold;">3D Scenes Generation on Benchmark datasets in One-shot</h2>
+    </div>
+    <div class="container" style="max-width: 1200px;">
+        <div class="row captioned_videos"  style="margin-left: 22px">
+
+            <!-- Main container -->
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <h6 class="caption" style="font-size: 13px;">Input Image</h6>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="data/DemoCompare_SUPP_Recon/real1/0.png" 
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px;">
+                    <!-- Video 3 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/real1/ours_smo.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings (spiral)</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/real1/ours_spi.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <h6 class="caption" style="font-size: 13px;">Input Image</h6>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="data/DemoCompare_SUPP_Recon/real2/0.png" 
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px;">
+                    <!-- Video 3 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/real2/ours_smo.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings (spiral)</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/real2/ours_spi.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <h6 class="caption" style="font-size: 13px;">Input Image</h6>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="data/DemoCompare_SUPP_Recon/auditorium/0.png" 
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px;">
+                    <!-- Video 3 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/auditorium/ours_smo.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings (spiral)</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/auditorium/ours_spi.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <h6 class="caption" style="font-size: 13px;">Input Image</h6>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="data/DemoCompare_SUPP_Recon/family/0.png" 
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px;">
+                    <!-- Video 3 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/family/ours_smo.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings (spiral)</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/family/ours_spi.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <h6 class="caption" style="font-size: 13px;">Input Image</h6>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="data/DemoCompare_SUPP_Recon/francis/0.png" 
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px;">
+                    <!-- Video 3 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/francis/ours_smo.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings (spiral)</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/francis/ours_spi.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <h6 class="caption" style="font-size: 13px;">Input Image</h6>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="data/DemoCompare_SUPP_Recon/horse/0.png" 
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px;">
+                    <!-- Video 3 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/horse/ours_smo.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings (spiral)</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/horse/ours_spi.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <!-- Image on the left -->
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <h6 class="caption" style="font-size: 13px;">Input Image</h6>
+                    <div class="video-compare-container" style="height: 240px; width: auto;">
+                        <img src="data/DemoCompare_SUPP_Recon/palace/0.png" 
+                            style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <!-- Videos on the right -->
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px;">
+                    <!-- Video 3 -->
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/palace/ours_smo.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+
+                    <div style="text-align: center; flex: 0 0 auto;">
+<h6 class="caption" style="font-size: 13px;">Renderings (spiral)</h6>
+                        <div class="video-compare-container" style="height: 240px; width: auto;">
+                            <video class="video lazy" loop playsinline autoplay muted 
+                            src="data/DemoCompare_SUPP_Recon/palace/ours_spi.mp4" 
+                            style="height: 240px; width: auto; object-fit: contain;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="divider" />
+
+    <script src="data/assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+</body>
+
+</html>

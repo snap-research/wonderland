@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/styles.css">
+ -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./resources/bootstrap.min.css">
+  <link rel="stylesheet" href="./resources/font-awesome.min.css">
+  <link rel="stylesheet" href="./resources/codemirror.min.css">
+  <link rel="stylesheet" href="./resources/app.css">
+  <link rel="stylesheet" href="./resources/bootstrap.min(1).css">
+
+  <script src="./resources/jquery.min.js"></script>
+  <script src="./resources/bootstrap.min.js"></script>
+  <script src="./resources/codemirror.min.js"></script>
+  <script src="./resources/clipboard.min.js"></script>
+
+  <script src="./resources/app.js"></script>
+
+<!-- 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest"> -->
+ 
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 0px
+      }
+      .slider-container {
+          position: relative;
+          width: 45%; /* Default slider width */
+          margin: auto;
+          overflow: hidden;
+      }
+      .slider {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+      }
+      .slide {
+          flex: 0 0 calc(100% / 3); /* Show 3 images per row */
+          box-sizing: border-box;
+          padding: 5px;
+      }
+      .slide img {
+          width: 100%;
+          display: block;
+          cursor: pointer;
+          transition: opacity 0.5s ease-in-out;
+      }
+      .video-container {
+          position: relative;
+          margin: 0px auto;
+          width: 30%; /* Default video width */
+          height: auto;
+          margin-bottom: 0px
+          
+
+         
+      }
+      .video-container video {
+          width: 90%;
+          aspect-ratio: 3 / 2; /* Maintain consistent aspect ratio */
+          border: none; /* Remove any default borders */
+          transition: opacity 0.5s ease-in-out;
+          margin-bottom: 0px
+      }
+      .navigation {
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          transform: translateY(-50%);
+          pointer-events: none;
+      }
+      .nav-btn {
+          pointer-events: auto;
+          font-size: 2rem;
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          padding: 10px;
+      }
+
+    .videos-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 0px; /* Adjust the gap between videos as needed */
+      justify-content: center; /* Center the videos horizontally */
+      
+  }
+  .video {
+    height: 100%;
+    width: 100%; /* Ensure videos take full width of the column */
+    margin-bottom: 0px
+    
+  }
+
+.multi-column {
+  column-count: 2; /* Adjust as needed */
+  column-gap: 10px; /* Adjust as needed */
+  width: 50%;
+  height: 50%;
+}
+
+.column {
+  text-align: center;
+  margin: 20px 0;
+}
+.publication-title {
+  font-size: 2rem; /* Default size for the text */
+  color: black; /* Black color for the rest of the text */
+}
+.highlight {
+  font-size: 3.5rem; /* Bigger size for "Wonderland" */
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff4b1f, #ffcc00, #1fddff, #28a745);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-animation 6s ease infinite;
+}
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+  
+
+  <div class="column has-text-centered">
+    <h1 class="title is-1 publication-title" style="font-size: 4.5rem;">  
+      <span class="highlight"style="font-size: 4.5rem;">Wonderland</span>: Navigating 3D Scenes from a Single Image
+    </h1>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <ul class="list-inline">
+            <li>
+              <a href="https://github.com/hw-liang">
+                  Hanwen Liang
+              </a>
+              <sup>*</sup>
+              <!-- <sup>†</sup> -->
+              <br>University of Toronto, Snap Inc.
+          </li>
+              <li>
+                  <a href="">
+                      Junli Cao
+                  </a>
+                  <sup>*</sup>
+                  <br>Snap Inc., University of California, Los Angeles
+              </li>
+              <li>
+                  <a href="">
+                    Vidit Goel
+                  </a>
+                  <br>Snap Inc.
+              </li>
+              <li>
+                  <a href="https://guochengqian.github.io/">
+                    Guocheng Qian
+                  </a>
+                  <br>Snap Inc.
+              </li>
+              
+              <li>
+                  <a href="">
+                    Sergei Korolev
+                  </a>
+                  <br>Snap Inc.
+              </li><br>
+              <li>
+                  <a href="https://web.cs.ucla.edu/~dt/">
+                    Demetri Terzopoulos
+                  </a>
+                  <br>University of California, Los Angeles
+              </li>
+              <li>
+                  <a href="https://www.comm.utoronto.ca/~kostas/">
+                    Konstantinos N. Plataniotis
+                  </a>
+                  <br> University of Toronto
+              </li>
+                
+          
+              <li>
+                  <a href="http://www.stulyakov.com/">
+                      Sergey Tulyakov
+                  </a>
+                  <br>Snap Inc.
+              </li>
+              <li>
+                  <a href="https://alanspike.github.io/">
+                      Jian Ren
+                  </a>
+                  <br>Snap Inc.
+              </li>
+          </ul>
+
+          <sup>*</sup>
+          <span class="equal">Equal Contribution. </span>
+
+          <!-- <sup>†</sup>
+          <span class="equal">Work done as an intern at Snap Inc.</span> -->
+      </div>
+  </div>
+
+
+    <div class="publication-links">
+      <span class="link-block">
+        <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark fancy-button">
+            <span class="icon">
+                <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path>
+                </svg>
+            </span>
+            <span>Paper</span>
+        </a>
+      </span>
+
+      <span class="link-block">
+        <a href="" class="external-link button is-normal is-rounded is-dark fancy-button">
+          <span class="icon">
+              <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+           </span>
+          <span>Code - Coming soon </span>
+        </a> 
+      </span>
+      <br> 
+    </div>
+
+
+    </div>
+
+  
+
+    <div class="content" style="margin-bottom: 0px;">
+      <div class="columns is-centered">
+          <div class="column is-full-width">
+              <div class="video" style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                  
+                  <!-- Video 1 -->
+                  <div style="text-align: center; width: 28%;">
+                      <video poster="" id="lego1" autoplay controls muted loop playsinline style="width: 100%; height: auto; margin-bottom: 1px;">
+                          <source src="3d_autoregressive/1_0ab7eb99awide/comp.mp4" type="video/mp4">
+                      </video>
+                      <img src="3d_autoregressive/1_0ab7eb99awide/0.png" alt="Image 1" style="width: 50%; height: auto; margin-top: 0.5rem;">
+                  </div>
+  
+                  <!-- Video 2 -->
+                  <div style="text-align: center; width: 28%;">
+                      <video poster="" id="lego2" autoplay controls muted loop playsinline style="width: 100%; height: auto; margin-bottom: 1px;">
+                          <source src="3d_autoregressive/00c5252d5_final.mp4" type="video/mp4">
+                      </video>
+                      <img src="3d_autoregressive/00c5252d5.jpg" alt="Image 2" style="width: 52%; height: auto; margin-top: 0.5rem;">
+                  </div>
+  
+                  <!-- Video 3 -->
+                  <div style="text-align: center; width: 28%;">
+                      <video poster="" id="lego3" autoplay controls muted loop playsinline style="width: 100%; height: auto;">
+                          <source src="3d_autoregressive/1_0a1628f24wide/comp.mp4" type="video/mp4">
+                      </video>
+                      <img src="3d_autoregressive/1_0a1628f24wide/0.png" alt="Image 3" style="width: 50%; height: auto; margin-top: 0.5rem;">
+                  </div>
+                  
+              </div>
+              <h1 class="title is-4" style="text-align: center; margin-top: -1rem;">
+                  Given a single image, Wonderland generates 3D scenes from the latent space of a camera-guided video diffusion model in a feed-forward manner. Above videos are rendered from built 3DGS models.
+              </h1>
+          </div>
+      </div>
+  </div>
+
+</div> 
+
+
+
+
+
+</section>
+
+<section class="hero" style="margin-top: -1rem;">  
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+      
+  
+
+          <div class="container ">
+            <div class=" has-text-centered">
+              <div class="content has-text-justified">
+              </div>
+              <div class="columns is-centered">
+              
+            </div>
+          </div>
+          <h2 class="title is-2" style="margin-top: -1rem;">Abstract </h2>
+            <p class="text-justify" style="margin-top: 0;">
+           
+              This paper addresses a challenging question: How can we efficiently create high-quality, wide-scope 3D scenes from a single arbitrary image?
+              Existing methods face several constraints, such as requiring multi-view data, time-consuming per-scene optimization, low visual quality in backgrounds, and distorted reconstructions in unseen areas. 
+              We propose a novel pipeline to overcome these limitations.
+              Specifically, we introduce a large-scale reconstruction model that uses latents from a video diffusion model to predict 3D Gaussian Splattings for the scenes in a feed-forward manner.
+              The video diffusion model is designed to create videos precisely following specified camera trajectories, allowing it to generate compressed video latents that contain multi-view information while maintaining 3D consistency.
+              We train the 3D reconstruction model to operate on the video latent space with a progressive training strategy, enabling the efficient generation of high-quality, wide-scope, and generic 3D scenes.
+              Extensive evaluations across various datasets demonstrate that our model significantly outperforms existing methods for single-view 3D scene generation, particularly with out-of-domain images. For the first time, we demonstrate that a 3D reconstruction model can be effectively built upon the latent space of a diffusion model to realize efficient 3D scene generation.
+            </p>
+       
+        <img src="teaser-final.png" width="90%">
+    </object>
+</body>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </h1>
+
+<section style="margin-top: 1rem; padding-top: 0; padding-bottom: 0;">
+    <h1 class="title is-1" style="font-size: 3.5rem;"> 
+    3D Scenes Generation in One-shot 
+    </h1>
+    <p>Given <i>single</i> images, <b>Wonderland</b> generates <i>high-fidelity</i> and <i>wide-scope</i> 3D scenes in one-shot. Demos are rendered from generated 3DGS models.</p>
+    </h2>
+
+    <div class="video-container" id="videoContainer">
+      <video id="video" autoplay loop muted>
+          <source src="video1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="slider-container" id="sliderContainer">
+      <div id="slider" class="slider">
+        <div class="slide">
+          <img src="3d_spiral/3/0.png" alt="Image 1" onclick="changeVideo(0)">
+        </div>
+        <div class="slide">
+            <img src="3d_spiral/moto2/0.png" alt="Image 2" onclick="changeVideo(1)">
+        </div>
+        <div class="slide">
+            <img src="3d_spiral/90167892/0.png" alt="Image 3" onclick="changeVideo(2)">
+        </div>
+        <div class="slide">
+            <img src="3d_spiral/19/0.png" alt="Image 4" onclick="changeVideo(3)">
+        </div>
+        <div class="slide">
+            <img src="3d_spiral/dwarf/0.png" alt="Image 5" onclick="changeVideo(4)">
+        </div>
+        <div class="slide">
+            <img src="3d_spiral/SUPP_InWild/df69d3e9_vc/0.png" alt="Image 6" onclick="changeVideo(5)">
+        </div>
+        <div class="slide">
+          <img src="3d_spiral/3/0.png" alt="Image 1" onclick="changeVideo(0)">
+        </div>
+        <div class="slide">
+            <img src="3d_spiral/moto2/0.png" alt="Image 2" onclick="changeVideo(1)">
+        </div>
+      </div>
+      <div class="navigation">
+          <button id="prev" class="nav-btn">❮</button>
+          <button id="next" class="nav-btn">❯</button>
+      </div>
+    </div>
+
+
+    <script>
+      const slider = document.getElementById('slider');
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+      const video = document.getElementById('video');
+
+      const videoSources = [
+      '3d_spiral/3/3_mid.mp4',
+      "3d_spiral/moto2/moto2_mid.mp4",
+      "3d_spiral/90167892/90167892_mid.mp4",
+      "3d_spiral/19/19_mid.mp4",
+      "3d_spiral/dwarf/dwarf_mid.mp4",
+      "3d_spiral/SUPP_InWild/df69d3e9_vc/df69d3e9_mid.mp4",
+      '3d_spiral/3/3_mid.mp4',
+      ];
+
+      let currentIndex = 0;
+      const imagesPerRow = 3;
+        
+        function updateSlider() {
+          const offset = currentIndex * (100 / imagesPerRow);
+
+          slider.style.transform = `translateX(-${offset}%)`;
+      }
+      
+
+      function changeVideoPre(index) {
+        currentIndex = (currentIndex - 1 + 6) % 6;
+        video.src = videoSources[currentIndex + 1];
+        video.load();
+        video.play(); // Ensure video starts playing after change
+        updateSlider();
+      }
+
+      function changeVideoNext(index) {
+        currentIndex = (currentIndex + 1) % 6;
+        video.src = videoSources[currentIndex + 1];
+        video.load();
+        video.play(); // Ensure video starts playing after change
+        updateSlider();
+      }
+
+      prevBtn.addEventListener('click', () => {
+          changeVideoPre(currentIndex);
+      });
+
+      nextBtn.addEventListener('click', () => {
+          changeVideoNext(currentIndex);
+      });
+
+      // Initial setup on page load
+      document.addEventListener('DOMContentLoaded', () => {
+          video.src = videoSources[currentIndex + 1];
+          video.load();
+          video.play();
+          updateSlider();
+      });
+    </script>
+</section>
+  
+
+
+<section style="margin-top: 1%">
+
+    <div class="video-container" id="videoContainer">
+      <video id="videoRot" autoplay loop muted>
+          <source src="video1.mp4" type="video/mp4">
+      </video>
+    </div>
+  <!-- 7woniu 3pin 8shu 5flows 4flow 6shuzhuang 2car 1chengbao -->
+  <div class="slider-container" id="sliderContainer">
+    <div id="sliderRot" class="slider">
+        <div class="slide">
+            <img src="data/Reconstruction/Rotate_final/sample7.png" alt="Image 1" onclick="changeVideoRot(0)">
+        </div>
+        <div class="slide">
+            <img src="data/Reconstruction/Rotate_final/sample3.png" alt="Image 2" onclick="changeVideoRot(1)">
+        </div>
+        <div class="slide">
+            <img src="data/Reconstruction/Rotate_final/sample8.png" alt="Image 3" onclick="changeVideoRot(2)">
+        </div>
+        <div class="slide">
+            <img src="data/Reconstruction/Rotate_final/sample4.png" alt="Image 4" onclick="changeVideoRot(3)">
+        </div>
+        <div class="slide">
+            <img src="data/Reconstruction/Rotate_final/sample5.png" alt="Image 5" onclick="changeVideoRot(4)">
+        </div>
+        <div class="slide">
+            <img src="data/Reconstruction/Rotate_final/sample6.png" alt="Image 6" onclick="changeVideoRot(5)">
+        </div>
+        <div class="slide">
+          <img src="data/Reconstruction/Rotate_final/sample2.png" alt="Image 6" onclick="changeVideoRot(6)">
+      </div>
+      <div class="slide">
+        <img src="data/Reconstruction/Rotate_final/sample1.png" alt="Image 6" onclick="changeVideoRot(7)">
+      </div>
+      <div class="slide">
+        <img src="data/Reconstruction/Rotate_final/sample7.png" alt="Image 1" onclick="changeVideoRot(0)">
+      </div>
+      <div class="slide">
+          <img src="data/Reconstruction/Rotate_final/sample3.png" alt="Image 2" onclick="changeVideoRot(1)">
+      </div>
+    </div>
+    <div class="navigation">
+        <button id="prevRot" class="nav-btn">❮</button>
+        <button id="nextRot" class="nav-btn">❯</button>
+    </div>
+  </div>
+  
+
+  
+  <script>
+    const sliderRot = document.getElementById('sliderRot');
+    const prevBtnRot = document.getElementById('prevRot');
+    const nextBtnRot = document.getElementById('nextRot');
+    const videoRot = document.getElementById('videoRot');
+  
+    const videoSourcesRot = [
+        "data/Reconstruction/Rotate_final/sample7.mp4",
+        "data/Reconstruction/Rotate_final/sample3.mp4",
+        "data/Reconstruction/Rotate_final/sample8.mp4",
+        "data/Reconstruction/Rotate_final/sample4.mp4",
+        "data/Reconstruction/Rotate_final/sample5.mp4",
+        "data/Reconstruction/Rotate_final/sample6.mp4",
+        "data/Reconstruction/Rotate_final/sample2.mp4",
+        "data/Reconstruction/Rotate_final/sample1.mp4",
+        "data/Reconstruction/Rotate_final/sample7.mp4",
+    ];
+  
+    let currentIndexRot = 0;
+    const imagesPerRowRot = 3;
+  
+    function updateSliderRot(sliderId) {
+      const offset = currentIndexRot * (100 / imagesPerRowRot);
+      sliderRot.style.transform = `translateX(-${offset}%)`;
+    }
+
+    function changeVideoRotPre(index) {
+      currentIndexRot = (currentIndexRot - 1 + 8) % 8;
+      videoRot.src = videoSourcesRot[currentIndexRot + 1];
+      videoRot.load();
+      videoRot.play(); // Ensure video starts playing after change
+      updateSliderRot();
+    }
+
+    function changeVideoRotNext(index) {
+      currentIndexRot = (currentIndexRot + 1) % 8;
+      videoRot.src = videoSourcesRot[currentIndexRot + 1];
+      videoRot.load();
+      videoRot.play(); // Ensure video starts playing after change
+      updateSliderRot();
+    }
+  
+    prevBtnRot.addEventListener('click', () => {
+        changeVideoRotPre(currentIndexRot);
+    });
+  
+    nextBtnRot.addEventListener('click', () => {
+        changeVideoRotNext(currentIndexRot);
+    });
+  
+    // Initial setup on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      videoRot.src = videoSourcesRot[currentIndexRot + 1];
+      videoRot.load();
+      videoRot.play();
+        updateSliderRot();
+    });
+  </script>
+</section>
+
+
+
+<section style="margin-top: 3%">
+
+    <h1 class="title is-1" style="font-size: 3.5rem;"> 
+    Extensive Navigation over 3D Scenes by Autoregressive Generation
+    </h1>
+    <p>Given <i>single</i> images, <b>Wonderland</b> fulfills extensive navigations over 3D scenes by autoregressive generation. Demos are rendered from generated 3DGS models.</p>
+     <div class="video-container" id="videoContainer">
+      <video id="videoAuto" autoplay loop muted>
+          <source src="video1.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+
+  <div class="slider-container" id="sliderContainer">
+    <div id="sliderAuto" class="slider">
+        <div class="slide">
+            <img src="3d_autoregressive/0a292a9bf.jpg" alt="Image 1" onclick="changeVideoAuto(0)">
+        </div>
+        <div class="slide">
+            <img src="3d_autoregressive/901678.jpg" alt="Image 2" onclick="changeVideoAuto(1)">
+        </div>
+        <div class="slide">
+            <img src="3d_autoregressive/2_0aa434207wide/0.png" alt="Image 3" onclick="changeVideoAuto(2)">
+        </div>
+        <div class="slide">
+            <img src="3d_autoregressive/2_84183601wide/0.png" alt="Image 4" onclick="changeVideoAuto(3)">
+        </div>   
+        <div class="slide">
+          <img src="3d_autoregressive/0a292a9bf.jpg" alt="Image 1" onclick="changeVideoAuto(0)">
+        </div>
+        <div class="slide">
+            <img src="3d_autoregressive/901678.jpg" alt="Image 2" onclick="changeVideoAuto(1)">
+        </div>   
+    </div>
+    <div class="navigation">
+        <button id="prevAuto" class="nav-btn">❮</button>
+        <button id="nextAuto" class="nav-btn">❯</button>
+    </div>
+  </div>
+  
+  <style>
+    .equal {
+      font-size: 12px;
+    }
+    .fancy-button {
+      background: linear-gradient(to right, #a569e6, #6ea0f5);
+      color: white;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+    }
+
+    .fancy-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .fancy-button .icon {
+        margin-right: 0.5rem;
+    }
+
+    .fancy-button svg {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .fancy-button span {
+        vertical-align: middle;
+    }
+  </style>
+  <script>
+    const sliderAuto = document.getElementById('sliderAuto');
+    const prevBtnAuto = document.getElementById('prevAuto');
+    const nextBtnAuto = document.getElementById('nextAuto');
+    const videoAuto = document.getElementById('videoAuto');
+  
+    const videoSourcesAuto = [
+      "3d_autoregressive/0a292a9bf_final.mp4",
+      "3d_autoregressive/901678_final.mp4",
+      "3d_autoregressive/2_0aa434207wide/comp.mp4",
+      "3d_autoregressive/2_84183601wide/comp.mp4",
+      "3d_autoregressive/0a292a9bf_final.mp4",
+    ];
+  
+    let currentIndexAuto = 0;
+    const imagesPerRowAuto = 3;
+  
+    function updateSliderAuto(sliderId) {
+      const offset = currentIndexAuto * (100 / imagesPerRowAuto);
+      sliderAuto.style.transform = `translateX(-${offset}%)`;
+    }
+    
+    function changeVideoAutoPre(index) {
+      currentIndexAuto = (currentIndexAuto - 1 + 4) % 4;
+      videoAuto.src = videoSourcesAuto[currentIndexAuto + 1];
+      videoAuto.load();
+      videoAuto.play(); // Ensure video starts playing after change
+      updateSliderAuto();
+    }
+
+    function changeVideoAutoNext(index) {
+      currentIndexAuto = (currentIndexAuto + 1) % 4;
+      videoAuto.src = videoSourcesAuto[currentIndexAuto + 1];
+      videoAuto.load();
+      videoAuto.play(); // Ensure video starts playing after change
+      updateSliderAuto();
+    }
+  
+    prevBtnAuto.addEventListener('click', () => {
+        changeVideoAutoPre(currentIndexAuto);
+    });
+  
+    nextBtnAuto.addEventListener('click', () => {
+        changeVideoAutoNext(currentIndexAuto);
+    });
+  
+    // Initial setup on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      videoAuto.src = videoSourcesAuto[currentIndexAuto + 1];
+      videoAuto.load();
+      videoAuto.play();
+        updateSliderAuto();
+    });
+  </script>
+
+
+
+  <div class="publication-links">
+    <span class="link-block">
+      <a href="3d.html" class="external-link button is-normal is-rounded is-dark fancy-button">
+          <span>More Examples </span>
+      </a>
+    </span>
+    <br> 
+  </div>
+
+
+  
+
+</section>
+
+
+
+<section>
+
+  <div class="content">
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+
+      <h1 class="title is-1" style="font-size: 3.5rem;">Camera-guided Video Generations</h1>
+      <p>From <i>single</i> images, the proposed <b>camera-guided video diffusion model</b> generates videos precisely following specified camera trajectories. Demos are generated videos with different image prompts using same camera trajectories.</p>
+
+  <div style="display: flex; align-items: center; justify-content: center; gap: 2px; margin-left: 0% ; margin-right: -14%;" style="max-width: 5000px;">
+
+
+    <div style="flex: 0 0 auto; text-align: center;">
+      <div class="compare-title" style="margin-bottom: 5px;margin-left: 12%">
+          <h2 class="caption" style="font-size: 13px;">Camera </h2>
+      </div>
+      <div class="video-compare-container" style="height: 190px; width: auto;margin-left: 0%">
+          <img src="data/Demo_Camera/1_pose_comp.png"
+              style="height: 100%; width: 100%; object-fit: contain;">
+      </div>
+  </div>
+    <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+        <!-- Video 1 -->
+        <div class="col-xs-64">
+          <div class="video-compare-container" style="width: 80%;  margin-bottom: 1px; margin-left: 0%">
+              <img src="data/Demo_Camera/four_times_three_final.png" 
+                  style="height: 100%; width: 100%; object-fit: contain;">
+          </div>
+          <div class="video-compare-container" style="width: 80%; margin-left: 0%">
+              <video class="video lazy" id="ex16" loop playsinline autoPlay muted src="data/Demo_Camera/four_times_three_final.mp4"></video>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 2px;  margin-left: 0% ; margin-right: -14%; margin-top: 10px" style="max-width: 1500px;">
+
+
+  <div style="flex: 0 0 auto; text-align: center;">
+    <div class="compare-title" style="margin-bottom: 5px;margin-left: 12%">
+        <h2 class="caption" style="font-size: 13px;">Camera </h2>
+    </div>
+    <div class="video-compare-container" style="height: 190px; width: auto;margin-left: 12%">
+        <img src="data/Demo_Camera/2_pose_comp.png"
+            style="height: 100%; width: 100%; object-fit: contain;">
+    </div>
+</div>
+  <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+      <!-- Video 1 -->
+      <div class="col-xs-64">
+        <div class="video-compare-container" style="width: 80%;  margin-bottom: 1px; margin-left: 0%">
+            <img src="data/Demo_Camera/four_times_three_final_2.jpg" 
+                style="height: 100%; width: 100%; object-fit: contain;">
+        </div>
+        <div class="video-compare-container" style="width: 80%; margin-left: 0%">
+            <video class="video lazy" id="ex16" loop playsinline autoPlay muted src="data/Demo_Camera/four_times_three_final_2.mp4"></video>
+        </div>
+    </div>
+  </div>
+
+  
+
+
+
+</div>
+
+</div>
+</section>
+
+
+
+
+
+<section>
+
+  <div class="content">
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+
+      <h1 class="title is-1" style="font-size: 3.5rem; margin-top: -1rem;">Extensive Exploration over Scenes using Multiple Camera Trajectories </h1>
+      <p>From <i>single</i> images, the proposed <b>camera-guided video diffusion model</b> extensively explores scenes precisely following specified camera trajectories. Demos are generated videos conditioned on single images and multiple camera trajectories.</p>
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 2px;  margin-left: -14% ; margin-right: -14%;" style="max-width: 1500px;">
+        
+        <!-- Image on the left -->
+        <div style="flex: 0 0 auto; text-align: center; margin-top: -2.5rem;">
+            <div class="compare-title" style="margin-bottom: 5px;">
+                <h2 class="caption" style="font-size: 13px;">Input Image</h2>
+            </div>
+            <div class="video-compare-container" style="height: 240px; width: auto;">
+                <img src="data/Demo_Camera/00a70e13d.jpg" 
+                    style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+        </div>
+        <!-- Videos on the right -->
+        <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px; margin-top: -2.5rem;">
+            <!-- Video 1 -->
+            <div style="text-align: center; flex: 0 0 auto;">
+                <div class="compare-title" style="margin-bottom: 5px;">
+                    <h2 class="caption" style="font-size: 13px;">Generated Video</h2>
+                </div>
+                <div class="video-compare-container" style="height: 240px; width: auto; margin-right:5px;">
+                    <video class="video lazy" loop playsinline autoplay muted 
+                        src="data/Demo_Camera/00a70e13d_comp.mp4" 
+                        style="height: 240px; width: auto; object-fit: contain;"></video>
+                </div>
+                
+            </div>
+        </div>
+
+        <div style="flex: 0 0 auto; text-align: center;">
+            <div class="compare-title" style="margin-bottom: 5px;margin-top: -2.5rem;">
+                <h2 class="caption" style="font-size: 13px;">Input Image</h2>
+            </div>
+            <div class="video-compare-container" style="height: 240px; width: auto;">
+                <img src="data/Demo_Camera/0ba1e1343.jpg" 
+                    style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+        </div>
+        <!-- Videos on the right -->
+        <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+            <!-- Video 1 -->
+            <div style="text-align: center; flex: 0 0 auto;">
+                <div class="compare-title" style="margin-bottom: 5px;margin-top: -2.5rem;">
+                    <h2 class="caption" style="font-size: 13px;">Generated Video</h2>
+                </div>
+                <div class="video-compare-container" style="height: 240px; width: auto;">
+                    <video class="video lazy" loop playsinline autoplay muted 
+                        src="data/Demo_Camera/0ba1e1343_comp.mp4" 
+                        style="height: 240px; width: auto; object-fit: contain;"></video>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div style="display: flex; align-items: center; justify-content: center; gap: 2px;  margin-left: -14% ; margin-right: -14%;">
+
+       <!-- Image on the left -->
+       <div style="flex: 0 0 auto; text-align: center;">
+        <div class="compare-title" style="margin-bottom:5px;">
+            <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+        </div>
+        <div class="video-compare-container" style="height: 240px; width: auto;">
+            <img src="data/Demo_Camera/0aa320ea5.jpg" 
+                style="height: 100%; width: 100%; object-fit: contain;">
+        </div>
+    </div>
+    <!-- Videos on the right -->
+    <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+        <!-- Video 1 -->
+        <div style="text-align: center; flex: 0 0 auto;">
+            <div class="compare-title" style="margin-bottom:5px;">
+                <!-- <h2 class="caption" style="font-size: 13px;">Generated Video</h2> -->
+            </div>
+            <div class="video-compare-container" style="height: 240px; width: auto;margin-right:5px;">
+                <video class="video lazy" loop playsinline autoplay muted 
+                    src="data/Demo_Camera/0aa320ea5_comp.mp4" 
+                    style="height: 240px; width: auto; object-fit: contain;"></video>
+            </div>
+            
+        </div>
+    </div>
+
+        <div style="flex: 0 0 auto; text-align: center;">
+            <div class="compare-title" style="margin-bottom:5px;">
+                <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+            </div>
+            <div class="video-compare-container" style="height: 240px; width: auto;">
+                <img src="data/Demo_Camera/0a292a9bf.jpg" 
+                    style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+        </div>
+        <!-- Videos on the right -->
+        <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+            <!-- Video 1 -->
+            <div style="text-align: center; flex: 0 0 auto;">
+                <div class="compare-title" style="margin-bottom:5px;">
+                    <!-- <h2 class="caption" style="font-size: 13px;">Generated Video</h2> -->
+                </div>
+                <div class="video-compare-container" style="height: 240px; width: auto;">
+                    <video class="video lazy" loop playsinline autoplay muted 
+                        src="data/Demo_Camera/0a292a9bf_comp.mp4" 
+                        style="height: 240px; width: auto; object-fit: contain;"></video>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+    <div style="display: flex; align-items: center; justify-content: center; gap: 2px;  margin-left: -14% ; margin-right: -14%;">
+
+     
+
+      <div style="flex: 0 0 auto; text-align: center;">
+          <div class="compare-title" style="margin-bottom:5px;">
+              <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+          </div>
+          <div class="video-compare-container" style="height: 240px; width: auto;">
+              <img src="data/Demo_Camera_more/91841490.jpg" 
+                  style="height: 100%; width: 100%; object-fit: contain;">
+          </div>
+      </div>
+      <!-- Videos on the right -->
+      <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+          <!-- Video 1 -->
+          <div style="text-align: center; flex: 0 0 auto;">
+              <div class="compare-title" style="margin-bottom:5px;">
+                  <!-- <h2 class="caption" style="font-size: 13px;">Generated Video</h2> -->
+              </div>
+              <div class="video-compare-container" style="height: 240px; width: auto;margin-right:5px;">
+                  <video class="video lazy" loop playsinline autoplay muted 
+                      src="data/Demo_Camera_more/91841490.mp4" 
+                      style="height: 240px; width: auto; object-fit: contain;"></video>
+              </div>
+          </div>
+      </div>
+
+      <div style="flex: 0 0 auto; text-align: center;">
+        <div class="compare-title" style="margin-bottom:5px;">
+            <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+        </div>
+        <div class="video-compare-container" style="height: 240px; width: auto;">
+            <img src="data/Demo_Camera_more/86463846.jpg" 
+                style="height: 100%; width: 100%; object-fit: contain;">
+        </div>
+    </div>
+    <!-- Videos on the right -->
+    <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+        <!-- Video 1 -->
+        <div style="text-align: center; flex: 0 0 auto;">
+            <div class="compare-title" style="margin-bottom:5px;">
+                <!-- <h2 class="caption" style="font-size: 13px;">Generated Video</h2> -->
+            </div>
+            <div class="video-compare-container" style="height: 240px; width: auto;">
+                <video class="video lazy" loop playsinline autoplay muted 
+                    src="data/Demo_Camera_more/86463846.mp4" 
+                    style="height: 240px; width: auto; object-fit: contain;"></video>
+            </div>
+        </div>
+    </div>
+      
+  </div>
+
+    
+    <div style="display: flex; align-items: center; justify-content: center; gap: 2px;  margin-left: -14% ; margin-right: -14%;">
+
+     
+
+        <div style="flex: 0 0 auto; text-align: center;">
+            <div class="compare-title" style="margin-bottom:5px;">
+                <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+            </div>
+            <div class="video-compare-container" style="height: 240px; width: auto;">
+                <img src="data/Demo_Camera_more/89752781.jpg" 
+                    style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+        </div>
+        <!-- Videos on the right -->
+        <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+            <!-- Video 1 -->
+            <div style="text-align: center; flex: 0 0 auto;">
+                <div class="compare-title" style="margin-bottom:5px;">
+                    <!-- <h2 class="caption" style="font-size: 13px;">Generated Video</h2> -->
+                </div>
+                <div class="video-compare-container" style="height: 240px; width: auto;margin-right:5px;">
+                    <video class="video lazy" loop playsinline autoplay muted 
+                        src="data/Demo_Camera_more/89752781.mp4" 
+                        style="height: 240px; width: auto; object-fit: contain;"></video>
+                </div>
+            </div>
+        </div>
+
+        <div style="flex: 0 0 auto; text-align: center;">
+          <div class="compare-title" style="margin-bottom:5px;">
+              <!-- <h2 class="caption" style="font-size: 13px;">Input Image</h2> -->
+          </div>
+          <div class="video-compare-container" style="height: 240px; width: auto;">
+              <img src="data/Demo_Camera/0a0654468.jpg" 
+                  style="height: 100%; width: 100%; object-fit: contain;">
+          </div>
+      </div>
+      <!-- Videos on the right -->
+      <div style="display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 2px;">
+          <!-- Video 1 -->
+          <div style="text-align: center; flex: 0 0 auto;">
+              <div class="compare-title" style="margin-bottom:5px;">
+                  <!-- <h2 class="caption" style="font-size: 13px;">Generated Video</h2> -->
+              </div>
+              <div class="video-compare-container" style="height: 240px; width: auto;">
+                  <video class="video lazy" loop playsinline autoplay muted 
+                      src="data/Demo_Camera/0a0654468_comp.mp4" 
+                      style="height: 240px; width: auto; object-fit: contain;"></video>
+              </div>
+          </div>
+      </div>
+        
+    </div>
+
+ 
+    
+  </div>
+
+
+</div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<div class="publication-links">
+ 
+  <span class="link-block">
+    <a href="camera.html" class="external-link button is-normal is-rounded is-dark fancy-button">
+        <span>More Examples </span>
+    </a>
+  </span>
+  <br> 
+</div>
+
+
+  <section class="hero">  
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+        
+            <div class="container ">
+              <div class=" has-text-centered">
+                <div class="content has-text-justified">
+                  <p>
+          
+                  </p>
+                </div>
+                <div class="columns is-centered">
+                
+              </div>
+            </div>
+            <h1 class="title is-2" style="font-size: 3.5rem;">Method </h2>
+             
+           
+              <p class="text-justify" style="margin-top: 0;">
+                Given a single image, a camera-guided video diffusion model follows the camera trajectory and generates a 3D-aware video latent, which is leveraged by the latent-based large reconstruction model to construct the 3D scene in a feed-forward manner. The video diffusion model involves dual-branch camera conditioning to fulfill precise pose control. The LaLRM operates in latent space and efficiently reconstructs a wide-scope and high-fidelity 3D scene.
+              </p>
+          <img src="pipeline.png" width="100%">
+        </object>
+  </body>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+          <h3>
+              Citation
+          </h3>
+          <div class="form-group col-md-10 col-md-offset-1">
+              <textarea id="bibtex" class="form-control" readonly="" style="display: none;">
+            @article{cao2022real, title={Real-Time Neural Light Field on Mobile Devices},
+            author={Cao, Junli and Wang, Huan and Chemerys, Pavlo and Shakhrai, Vladislav 
+                  and Hu, Ju and Fu, Yun and Makoviichuk, Denys and Tulyakov, Sergey and Ren, Jian},
+            journal={arXiv preprint arXiv:2212.08057},year={2022}}</textarea>
+              <div class="CodeMirror cm-s-default CodeMirror-wrap">
+                  <div
+                      style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 4px;">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+
+
+
+</body>
+
+</html>
