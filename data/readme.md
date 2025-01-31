@@ -6,9 +6,11 @@ The dataset consists of a set of .txt files, each corresponding to a video clip.
 
 The dataset follows a format similar to [RealEstate10K](https://google.github.io/realestate10k/). Please follow the steps to process the dataset:
 
-Download source videos with acid/download_videos.py.
-Crop the videos to extract clips of interest with acid/crop_videos.py.
-Caption the clips of interest with acid/caption_frames.py.
+1. Download source videos with `acid/download_videos.py`.
+
+2. Crop the videos to extract clips of interest with `acid/crop_videos.py`.
+
+3. Caption the clips of interest with `acid/caption_frames.py`.
 
 As each clip in ACID contains frames of the same scene, we use an image captioning model to describe the scenes.
 
