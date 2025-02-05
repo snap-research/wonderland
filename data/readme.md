@@ -15,6 +15,6 @@ The dataset follows a format similar to [RealEstate10K](https://google.github.io
 As each clip in ACID contains frames of the same scene, we use an image captioning model to describe the scenes.
 
 
-#### Noted. We empirically find that incorporating [DL3DV](https://github.com/DL3DV-10K/Dataset) during training is crucial for improving camera controllability, particularly with complex camera trajectories. We strictly adhere to the [RealEstate10K](https://google.github.io/realestate10k/) normalization pipeline for DL3DV pose normalization. For details, please refer to Sec. 4.3 in [this work](https://tinghuiz.github.io/papers/siggraph18_mpi.pdf). 
+#### Noted. [DL3DV](https://github.com/DL3DV-10K/Dataset) contains many scenes with complex camera trajectories and large view changes between consecutive keyframes. We empirically find that incorporating it during training is crucial for enhancing camera controllability. We strictly adhere to the [RealEstate10K](https://google.github.io/realestate10k/) normalization pipeline for DL3DV pose normalization. For details, please refer to Sec. 4.3 in [this work](https://tinghuiz.github.io/papers/siggraph18_mpi.pdf). 
 
 #### We are in the process of reviewing the release of the normalized poses of DL3DV.
