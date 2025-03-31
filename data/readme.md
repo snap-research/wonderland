@@ -1,3 +1,7 @@
+# dl3dv dataset
+
+[DL3DV](https://github.com/DL3DV-10K/Dataset) contains scenes with complex camera trajectories and large view changes between consecutive keyframes. Please refer to [960P](https://huggingface.co/datasets/DL3DV/DL3DV-ALL-960P) to download source frames and poses.
+
 # acid dataset
 
 Download the ACID and ACID-Large dataset from [Infinite Nature GitHub](https://infinite-nature.github.io/).
@@ -14,8 +18,4 @@ The dataset follows a format similar to [RealEstate10K](https://google.github.io
 
 As each clip in ACID contains frames of the same scene, we use an image captioning model to caption the scenes.
 
-# dl3dv dataset
-
-[DL3DV](https://github.com/DL3DV-10K/Dataset) contains scenes with complex camera trajectories and large view changes between consecutive keyframes. Please refer to [960P](https://huggingface.co/datasets/DL3DV/DL3DV-ALL-960P) to download source frames and poses.
-
-We follow the [RealEstate10K](https://google.github.io/realestate10k/) normalization pipeline for ACID and DL3DV pose normalization. For details, please refer to Sec. 4.3 in [this work](https://tinghuiz.github.io/papers/siggraph18_mpi.pdf). 
+We follow the [RealEstate10K](https://google.github.io/realestate10k/) normalization pipeline for DL3DV and ACID pose normalization. For details, please refer to Sec. 4.3 in [this work](https://tinghuiz.github.io/papers/siggraph18_mpi.pdf). 
